@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>We Are</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <style>
+      body {
+        color: white;
+        text-align: center;
+        font-family: 'Bungee Shade', cursive;
+        font-weight: normal !important;
+        font-size: 5rem;
+        padding: 5rem;
+        transition: background-color 0.8s ease;
+      }
+      #phrase {
+        font-family: 8rem;
+        -webkit-animation:fade 4s infinite;
+      }
+      @-webkit-keyframes fade {
+        0% { opacity:0; }
+        20% { opacity:1; }
+        80% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+      div {
+        border: 2px solid white;
+        position: absolute;
+        top: 5rem;
+        bottom: 5rem;
+        left: 5rem;
+        right: 5rem;
+        box-shadow: -10px 10px 0 white;
+      }
+    </style>
+    <script type="text/javascript">
+      var phrases = ['creators','producers','creator-producers','visionopolists','ideationists','dream fluffers','cantstopwontstopportunists','schematics freaks','ux lunatics','meth heads of hustle','design influencers','influence designers','flax flexers','flix fluxers','fax fixers','impact cobblers','untraditional degenerates','steve','chance wranglers','obstacle polyglots','snark chasms','archduchesses of turnkey','audience catalyzers','audience cattle-izers','growth snobs','size queens','big biggers','diversity considerators','content doulas','one of us is your cousin','r. kelly but the way people used to feel about him of marketing','SEO bad boys','url scofflaws','domain arsonists','social impressionists','digital fascists','team-oriented individualists','camera button pusher knowers','display perverts','innovation danglers','litness litmus test administrators','consul-generals of dopeness','media plumbers','thought leaders','notion chiefs','assessment honchos','pivot coxswains','former and future postmates','game-change game-changers','roi 360-ficationists','click snatchers','engagement ambigutionists','buzz mothers','proficient in photoshop']
+      var colors = ['black', '#4ABDAC', '#FC4A1A', '#F7B733', '#0375B4', '#E37222', '#07889B', '#A239CA', '#3CC47C']
+      index = 1
+      setInterval(() => {
+        document.getElementById('phrase').innerHTML = phrases[index % (phrases.length - 1)]
+        document.body.style.backgroundColor = colors[index % (colors.length - 1)]
+        index++
+      }, 4000)
+    </script>
+  </head>
+  <body style="background-color:black;">
+    <div>
+      <p>We Are</p>
+      <p id="phrase">creators<p>
+    </div>
+  </body>
+</html>
